@@ -4,9 +4,11 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+        
         
         {
-            "name": "Python Debugger: Django",
+            "name": "Python: Django",
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}\\manage.py",
