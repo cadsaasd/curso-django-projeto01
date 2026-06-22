@@ -18,14 +18,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-
+    
     <title>Recipes</title>
     <style>
         :root {
             --color-primary: #2B324F;
             --color-primary-hover: #2B3D4F;
-            --color-primary-dark: #2F2B4F;
-            --color-primary-dark-hover: #37315f;
+            --color-primary-dark: #363253;
+            --color-primary-dark-hover: #4c4679;
             --color-primary-light: #a9f1e8;
             --color-primary-light-hover: #77CCC0;
 
@@ -259,6 +259,26 @@
         
         .recipe-footer a:hover{
             background: var(--color-primary-dark-hover);
+        }
+        .main-footer{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--color-primary);
+            color: var(--color-off-white);
+            padding: var(--spacing-gutter-large);
+            font-size: 2rem;
+        }
+
+        .main-footer a{
+            text-decoration: none;
+            color: var(--color-off-white);
+            transition: all 300ms ease-in-out;
+        }
+        
+        .main-footer a:hover{
+            color: var(--color-gray-2);
+            text-decoration: underline;
         }
     </style>
 </head>
