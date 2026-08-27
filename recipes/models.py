@@ -8,6 +8,9 @@ class Author(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=65)
 
+    def __str__(self):
+        return self.name
+
 class Recipe(models.Model):
     title = models.CharField(max_length=65)
     description = models.CharField(max_length=165)
