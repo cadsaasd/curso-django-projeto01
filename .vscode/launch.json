@@ -1,12 +1,6 @@
 {
-    // Use o IntelliSense para saber mais sobre os atributos possíveis.
-    // Focalizar para exibir as descrições dos atributos existentes.
-    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
-        
-        
         {
             "name": "Python: Django",
             "type": "debugpy",
@@ -16,6 +10,22 @@
                 "runserver"
             ],
             "django": true
+        },
+        {
+            "name": "Pytest: Debug current file",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "${file}",
+                "-q"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "django": true,
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "project.settings"
+            }
         }
     ]
 }

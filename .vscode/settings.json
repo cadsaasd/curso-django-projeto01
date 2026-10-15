@@ -7,7 +7,8 @@
   "python.testing.pytestArgs": [],
   "python.testing.autoTestDiscoverOnSaveEnabled": true,
 
-  "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+  "python.defaultInterpreterPath": "${workspaceFolder}\\venv\\Scripts\\python.exe",
+  "python.terminal.activateEnvironment": true,
 
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8",
