@@ -1,5 +1,5 @@
 {
-  "editor.fontSize": 24,
+  "editor.fontSize": 19,
 
   "python.languageServer": "Pylance",
   "python.testing.unittestEnabled": false,

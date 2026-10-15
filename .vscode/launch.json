@@ -1,3 +1,4 @@
+
 {
     "version": "0.2.0",
     "configurations": [
@@ -15,17 +16,21 @@
             "name": "Pytest: Debug current file",
             "type": "debugpy",
             "request": "launch",
+            "python": "${workspaceFolder}\\venv\\Scripts\\python.exe",
             "module": "pytest",
             "args": [
                 "${file}",
-                "-q"
+                "-vv",
+                "-s"
             ],
             "console": "integratedTerminal",
             "justMyCode": false,
             "django": true,
             "env": {
-                "DJANGO_SETTINGS_MODULE": "project.settings"
-            }
+                "DJANGO_SETTINGS_MODULE": "project.settings",
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
