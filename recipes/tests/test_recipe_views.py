@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import resolve, reverse
 from recipes import views
+from recipes.models import Category, Recipe, User
 
 
 class RecipeViewsTest(TestCase):
@@ -22,6 +23,32 @@ class RecipeViewsTest(TestCase):
             'No recipes found here',
             response.content.decode('utf-8'),
         )
+
+    def test_recipe_home_template_loads_recipes(self):
+        category = Category.objects.create(name='Categoria')
+        author = User.objects.create_user(
+            first_name='user',
+            last_name='name',
+            username='username',
+            password='123456',
+            email='username@gmail.com',
+        )
+        recipe = Recipe.objects.create(
+            category=category,
+            author=author,
+            title='Recipe title',
+            description='Recipe description',
+            slug='recipe_slug',
+            preparation_time='10',
+            preparation_time_unit='min',
+            servings='5',
+            servings_unit='porções',
+            preparation_steps='Recipe preparation steps',
+            preparation_steps_is_html=False,
+            is_published=True,
+        )
+
+    ...
 
     def test_recipe_category_view_function_is_correct(self):
         view = resolve(
