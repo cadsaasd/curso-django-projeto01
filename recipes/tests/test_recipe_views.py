@@ -62,7 +62,7 @@ class RecipeViewsTest(RecipeTestBase):
     def test_recipe_home_category_loads_recipes(self):
         needed_title = 'This is a category test'
         # Needs a recipe for this test
-        self.make_recipe(needed_title)
+        self.make_recipe(title=needed_title)
 
         response = self.client.get(reverse("recipes:category", args=(1,)))
         content = response.content.decode('utf-8')
@@ -85,7 +85,7 @@ class RecipeViewsTest(RecipeTestBase):
     def test_recipe_detail_template_loads_recipes(self):
         needed_title = 'This is a detail page - It load one recipe'
         # Needs a recipe for this test
-        self.make_recipe(needed_title)
+        self.make_recipe(title=needed_title)
 
         response = self.client.get(
             reverse(
