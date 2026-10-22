@@ -1,9 +1,7 @@
 from django.core.exceptions import ValidationError
 from parameterized import parameterized  # type: ignore[import-untyped]
 
-from recipes.models import Recipe
-
-from .test_recipe_base import RecipeTestBase
+from .test_recipe_base import Recipe, RecipeTestBase
 
 
 class RecipeModelTest(RecipeTestBase):
