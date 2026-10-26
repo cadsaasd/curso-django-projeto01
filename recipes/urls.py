@@ -11,4 +11,5 @@ urlpatterns = [
         name='category',
     ),
     path('recipes/<int:id>/', views.recipe, name='recipe'),
+    path('recipes/search/', views.search, name='search'),
 ]
